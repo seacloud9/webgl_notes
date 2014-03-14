@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>reveal.js - The HTML Presentation Framework</title>
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+
+						<h1>Interactive video games on the web AND MOBILE</h1>
+						<div><a href="http://twitter.com/seacloud9" target="_blank">by Brendon A. Smith</a></div>
+
+				</section>
+				
+				<section>
+					<h2>Disclaimer</h2>
+					<div>
+						<br>
+					</div>
+					<div style="text-align: left; ">I am here on my own behalf and my views reflect only my own</div>
+					<div style="text-align: left; ">and not my employer. &nbsp;Everything that will be demonstrated</div>
+					<div style="text-align: left; ">here will be free and open source all contents will be available&nbsp;</div>
+					<div style="text-align: left; ">for free on <a href="https://github.com/seacloud9/ds.omegaInvaders" targe="_blank">gitHub.com</a>.</div>
+				</section>
+				<section>
+					<h2>Platforms?</h2>
+					<div>
+						<ul>
+							<li>
+								<span style="text-align: center;">Mobile / WebGL:</span>
+								<br>
+							</li>
+							<ul>
+								<li>
+									<span style="text-align: center;">
+									<a href="https://www.ludei.com/" target="_blank">Ludei</a>&nbsp;</span>
+								</li>
+								<li>
+									<span style="text-align: center;">
+									<a href="https://playcanvas.com/" target="_blank">Play Canvas</a>&nbsp;</span>
+									<span style="font-size: 36px; font-style: normal; font-variant: normal; text-align: center;">(Ludei Integration)</span>
+								</li>
+								<li>
+									<span style="text-align: center;">
+									<a href="http://www.gootechnologies.com/" target="_blank">Goo</a>&nbsp;(Ludei Integration)</span>
+								</li>
+								<li>
+									<span style="text-align: center;">
+									<a href="http://www.ambiera.com/copperlicht/" target="_blank">Copperlicht</a>
+									<br>
+									</span>
+								</li>
+								<li>
+									<a href="http://www.openfl.org/" target="_blank">OpenFL</a> / <a href="https://github.com/openfl/lime">Lime</a>&nbsp;/ <a href="http://haxe.org/">haXe</a>
+								</li>
+								<li>
+								<a href="http://impactjs.com/" target="_blank">ImapactJS</a>&nbsp;</li>
+							</ul>
+							<li>Others &nbsp;- No WebGL :(&nbsp;</li>
+							<ul>
+								<li>
+								<a href="https://unity3d.com/" target="_blank">Unity3d</a>&nbsp;(<a href="https://github.com/drojdjou/J3D">J3d / webGL</a>)</li>
+								<li>
+									<a href="http://www.adobe.com/products/air.html" target="_blank">AdobeAir</a>
+								</li>
+								<li>
+									<a href="http://www.corona.com/home/index.jsp" target="_blank">Corona</a>
+								</li>
+							</ul>
+							<li>
+							<a href="http://codeflow.org/entries/2013/feb/02/why-you-should-use-webgl/" target="_blank">Why pick webGL</a>?</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>What makes a good game?</h2>
+					<div>
+						<ol>
+							<li>Usability / Custom Made for the Platform</li>
+							<ul>
+								<li>Mobile one finger only.
+								</li>
+								<li>Mobile FPS are really challenging (<a href="http://bethsoft.com/en-us/games/RAGE" target="_blank">RAGE</a>)</li>
+							</ul>
+							<li>
+								<span>Fun and Imaginative&nbsp;</span>
+							</li>
+							<li>
+								<span>Storyline</span>
+							</li>
+							<li>
+								<span>Cool Graphics / Art Direction</span>
+							</li>
+							<li>
+								<span>Time / Money / Passion</span>
+							</li>
+						</ol>
+					</div>
+					<br>
+				</section>
+				<section>
+					<h2>What Games have I made?</h2>
+					<div>
+						<a href="https://play.google.com/store/apps/details?id=com.seacloud9.BotBlaster" target="_blank">Bot Blaster FPS</a>
+						<br>
+					</div>
+					<div>
+						<br>
+					</div>
+					<div>
+						<ul>
+							<li style="text-align: left;">What platform did you use to build it?</li>
+							<ul style="list-style-type: circle;">
+								<li style="text-align: left;">C# / Unity3d / Indy Version</li>
+							</ul>
+							<li>What would you change / where have you failed?</li>
+							<ul>
+								<li style="text-align: left;">Make it more useable by customizable controls.</li>
+								<li style="text-align: left;">Depend less on third party models</li>
+								<li style="text-align: left;">Make a web version available without a plugin.</li>
+								<li style="text-align: left;">I would choose a platform that is more open.&nbsp;</li>
+								<li style="text-align: left;">I would create a story line that is engaging that the user is more likely to take personal interest in possibly based off of social information and location.</li>
+							</ul>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>Examples of Awesome Games</h2>
+					<div style="font-size:19px">
+						<ol>
+							<li>WebGL Games</li>
+							<ul>
+								<li>
+									<a href="http://ironbane.com/game" target="_blank">IronBane</a>
+								</li>
+								<li>
+									<a href="http://hexgl.bkcore.com/" target="_blank">HexGL</a>
+								</li>
+								<li>
+									<a href="http://radmars.com/tessitron/ludumDare/" target="_blank">Tessitron</a>
+									<br>
+								</li>
+								<li>
+								<a href="http://www.isaacsukin.com/news/2012/06/how-build-first-person-shooter-browser-threejs-and-webglhtml5-canvas" target="_blank">Nemesis</a>&nbsp;</li>
+								<li>
+									<a href="https://github.com/shama/ludum-dare-26" target="_blank">Mal</a>
+								</li>
+								<li>
+									<a href="http://hellorun.helloenjoy.com/" target="_blank">HelloRun</a>
+								</li>
+								<li>
+									<a href="http://asmallgame.com/kiddisco/" target="_blank">Kid Disco</a>
+								</li>
+								<li>
+								<a href="http://media.tojicode.com/q3bsp/" target="_blank">Quake</a>?</li>
+							</ul>
+							<li>Mobile Games</li>
+							<ul>
+								<li>
+									Temple Run
+								</li>
+								<li>Rage</li>
+								<li>
+									<a href="https://play.google.com/store/apps/details?id=com.interrupt.dungeoneer" target="_blank">Delver</a>
+								</li>
+							</ul>
+							<li>
+								<span style="text-align: center;">Air / Flash Games</span>
+								<span>&nbsp;</span>
+								<br>
+							</li>
+							<ul>
+								<li>
+									<a href="http://www.skrillexquest.com/" target="_blank">SkrillexQuest</a>
+								</li>
+								<li>
+									<a href="https://play.google.com/store/apps/details?id=air.invawayders" target="_blank">Invawayders</a>
+								</li>
+							</ul>
+						</ol>
+					</div>
+				</section>
+				<section>
+					<h2>So What Game Did you make?</h2>
+					<div>OmegaInvaders</div>
+					<div>inspired by <a href="http://www.infiniteturtles.co.uk/blog/category/games" target="_blank">Away3d Invaders</a>&nbsp;and</div>
+					<div>
+						<a href="http://levitated.net/daily/levInvaderFractal.html" target="_blank">Jared Tarbell Fractal Invaders &nbsp;</a>
+					</div>
+					<div>
+						<br>
+					</div>
+					<div>Technology Used:</div>
+					<div>
+						<ul>
+							<li>
+							<a href="http://www.createjs.com/#!/EaselJS" target="_blank">EaselJS</a> (All UI is canvas generated)</li>
+							<li>
+								<a href="http://voxeljs.com/" target="_blank">VoxelJS</a>
+							</li>
+							<li>
+							<a href="http://threejs.org/" target="_blank">threeJS</a>&nbsp;</li>
+							<li>
+								<a href="http://nodejs.org/" target="_blank">nodeJS</a>
+							</li>
+							<li>
+								<a href="https://github.com/squarefeet/ShaderParticleEngine" target="_blank">Stemkoski's Particles via Node&nbsp;</a>
+							</li>
+							<li>
+								<a href="http://www.airtightinteractive.com/2013/02/intro-to-pixel-shaders-in-three-js/" target="_blank">Airtight Interactive Shaders</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>Why VoxelJS?</h2>
+					<div>
+						<ul>
+							<li>Algorithmic game creation / less dependency on models!</li>
+							<li>Voxels aren't just for MineCraft!</li>
+							<li>VoxelJS is built with node so it has a large package library</li>
+							<li>VoxelJS is built by some really awesome developers but if you so choose you too can create your own <a href="https://github.com/andallas/UnityVoxels" target="_blank">voxel library</a>.&nbsp;</li>
+							<li>VoxelJS provides built in Physics, Events, Modular design</li>
+							<li>Some people may have <a href="http://dontkry.com/posts/games/where-voxel-js-has-failed.html" target="_blank">issues</a> with it but it is their own fault.</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>Why Use a voxel library</h2>
+					<div>
+						<ul>
+							<li>With voxels you can make blocky models that borrow from the 8-bit era.</li>
+							<li>You can create algorithmic content, landscape, models, etc..&nbsp;</li>
+							<li>&nbsp;By not loading costly models your game can run faster.</li>
+							<li>It is more cost efficient then purchasing expensive models.</li>
+							<li>Because generative art / games can be really cool!</li>
+						</ul>
+						<div style="text-align: left;">
+							<br>
+						</div>
+					</div>
+					<div style="text-align: center;">Side Note Generative Art?</div>
+					<div style="text-align: left;">
+						<ul>
+							<li>
+							<a href="http://natureofcode.com/" target="_blank">Nature of Code</a>&nbsp;/ <a href="http://vimeo.com/58388167" target="_blank">Viemo</a>&nbsp;</li>
+							<li>
+								<a href="http://www.joshuadavis.com/" target="_blank">Joshua Davis&nbsp;</a>&nbsp;/ <a href="http://www.hypeframework.org/" target="_blank">Hypeframework</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>Omega Invaders</h2>
+					<div>
+						<ul>
+							<li>I built a few new modules on top of VoxelJS</li>
+							<ul>
+								<li>Bullets</li>
+								<li>Invader Module that uses Jared Tarbells Algorithm&nbsp;</li>
+							</ul>
+							<li>It's not finished it is a Work In Progress</li>
+							<ul>
+								<li>separate the ui into a module of its own.&nbsp;</li>
+								<li>add touch and device orientation</li>
+								<li>refine the design and shader usage.</li>
+								<li>Add Sound effects</li>
+								<li>Radar</li>
+								<li>Boids</li>
+								<li><a href="https://github.com/chrisekelley/voxel-multiplayer" target="_blank">Multiplayer?</a></li>
+							</ul>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>How was the ui built?</h2>
+					<div>
+						<ul>
+							<li>EaselJS its like flash in a canvas</li>
+							<li>The canvas responds to screen size</li>
+							<li>EaselJS makes it easy to create UIs&nbsp;</li>
+							<ul>
+								<li>Great Preloading Library</li>
+								<li>Custom Fonts (via css3)</li>
+								<li>Asset Management Images / Sprites</li>
+								<li>Supports a straight forward flash like api.&nbsp;</li>
+							</ul>
+						</ul>
+					</div>
+				</section>
+				
+				<section>
+					<h2>What about PixiJS?</h2>
+					<div>
+						<ul>
+							<li>Everyone thinks of 3D first but webGL is also for 2D.</li>
+							<li>PixiJS like EaselJS is a flash like api</li>
+							<li>How is PixiJS different from EaselJS? (webGL or Canvas)</li>
+							<li>There is <a href="https://github.com/jgranick/pixi.hx" target="_blank">haXe</a> Support for PixiJS / PhaserJS</li>
+							<li>It is easy to build UIs with these libraries.&nbsp;</li>
+							<li>PixiJS also comes with a few <a href="http://www.goodboydigital.com/pixijs/examples/15/indexAll.html" target="_blank">filters</a></li>
+							<li>Why do you keep mentioning flash?</li>
+							<li>PixiJS is great for creating simple blasters, puzzels, and adventure games.</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>What Platforms do you like</h2>
+					<div>
+						<ul>
+							<li>I like platforms that are flexible</li>
+							<li>Avoid vendor lock-in / No black boxes&nbsp;</li>
+							<li>Code once deploy everywhere</li>
+							<li>So other than HTML5 I would pick <a href="http://www.openfl.org/" target="_blank">openFL</a>&nbsp;/ haXe&nbsp;</li>
+							<ul>
+								<li>OpenFL supports the following Targets:</li>
+								<ul>
+									<li>Windows</li>
+									<li>Mac</li>
+									<li>Linux</li>
+									<li>iOS</li>
+									<li>Android</li>
+									<li>BlackBerry</li>
+									<li>Tizen</li>
+									<li>Emscripten</li>
+									<li>HTML5</li>
+								</ul>
+							</ul>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>So thats nice but..</h2>
+					<div>
+						<ul>
+							<li>Does it support <a href="https://github.com/seacloud9/ThreeHX/blob/master/renderers/GlRenderer.hx" target="_blank">threeJS?</a></li>
+							<li>What would you gain by porting it over?</li>
+							<li>Who would it benefit?</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>I would like to thank:</h2>
+					<div>The <a href="http://www.khronos.org/" target="_blank">Khronos Group</a>
+					</div>
+					<div>
+					<a href="http://vonchurch.com/" target="_blank">VonChurch</a> for hosting</div>
+					<div>
+						<a href="http://learningwebgl.com/blog/" target="_blank">LearningWebGL.com</a> / <a href="https://twitter.com/auradeluxe" target="_blank">Tony Parisi&nbsp;</a>
+					</div>
+					<div>
+					<a href="http://voxeljs.com/" target="_blank">VoxelJS</a> creators (<a href="https://twitter.com/maxogden" target="_blank">Max Ogden</a> and Company)</div>
+					<div>Also for learning I am recommending the following books:</div>
+					<div>
+						<br>
+					</div>
+					<div>
+						<ol>
+							<li>
+								<p style="color: rgb(0, 0, 0); margin-bottom: 0px; font-style: normal; font-variant: normal; text-transform: none; background-color: transparent;">
+								<span id="btAsinTitle">
+								<font style="font-size: 18px;">
+								<a href="http://www.amazon.com/Programming-Applications-HTML5-WebGL-Visualization/dp/1449362966/ref=sr_1_3?ie=UTF8&amp;qid=1394593358&amp;sr=8-3&amp;keywords=learning+webgl" target="_blank">Programming 3D Applications with HTML5 and WebGL: 3D Animation and Visualization for Web Pages</a>
+								</font>
+								</span>
+								</p>
+							</li>
+							<li>
+								<p style="margin-bottom: 0px; background-color: transparent">
+								<font>
+								<font color="#000000" size="4">
+								<span>
+								<a href="http://www.amazon.com/WebGL-Up-Running-Tony-Parisi/dp/144932357X/ref=sr_1_4?ie=UTF8&amp;qid=1394593358&amp;sr=8-4&amp;keywords=learning+webgl" target="_blank">WebGL: Up and Running</a>
+								</span>
+								</font>
+								</font>
+								</p>
+							</li>
+							<li>
+								<p style="margin-bottom: 0px; background-color: background-color: transparent;">
+								<font>
+								<font color="#000000" size="4">
+								<span>
+								<a href="http://www.amazon.com/WebGL-Beginners-Guide-Diego-Cantor/dp/184969172X/ref=la_B00IFXSKKQ_1_1?s=books&amp;ie=UTF8&amp;qid=1394593610&amp;sr=1-1" target="_blank">WebGL Beginner's Guide</a>
+								<br>
+								</span>
+								</font>
+								</font>
+								</p>
+							</li>
+						</ol>
+					<div>
+						<br>
+					</div>
+				</section>
+				<section>
+					<h2>Resources Game Development:</h2>
+					<div style="font-size:19px">
+					<ul>
+						<li>
+							<a href="http://voxeljs.com/" target="_blank">VoxelJS</a>
+						</li>
+						<li>
+							<a href="https://www.npmjs.org/search?q=voxel" target="_blank">Voxel Modules</a>
+						</li>
+						<li>
+							<a href="http://schteppe.github.io/cannon.js/" target="_blank">CannonJS physics engine</a>
+							<br>
+						</li>
+						<li>
+						<a href="https://github.com/supereggbert/JigLibJS" target="_blank">JigLib physics engine</a></li>
+						<li>
+						<a href="https://code.google.com/p/bulletjs/" target="_blank">Bullet physics engine</a></li>
+					</li>
+					<li>
+						<a href="https://github.com/kripken/ammo.js" target="_blank">AmmoJS physics engine</a>
+					</li>
+					<li>
+						<a href="http://qiao.github.io/PathFinding.js/visual/" target="_blank">PathFindingJS</a>
+					</li>
+					<li>
+						<a href="http://www.glge.org/" target="_blank">GlGE Library</a>
+					</li>
+					<li>
+						<a href="http://babylonhx.gamestudiohx.com/" target="_blank">BabylonhX Library</a>
+					</li>
+					<li>
+						<a href="http://www.pixijs.com/" target="_blank">PixiJS Library</a>
+					</li>
+					<li>
+						<a href="http://www.photonstorm.com/phaser" target="_blank">PhaserJS Library</a>
+					</li>
+					<li>
+						<a href="http://www.createjs.com/#!/EaselJS" target="_blank">EaselJS Library</a>
+					</li>
+					<li>
+						<a href="https://github.com/aduros/flambe/wiki/Showcase" target="_blank">Flambe Library</a>
+					</li>
+					<li>
+					<a href="http://learningthreejs.com/" target="_blank">LearningThreeJS Blog</a>?</li>
+					<li>
+						<a href="http://stemkoski.github.io/Three.js/" target="_blank">Stemkoski</a>
+					</li>
+				</ul>
+			</div>
+			</section>
+		</div>
+		
+	</div>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+	<script>
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+			// Parallax scrolling
+			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+			// parallaxBackgroundSize: '2100px 900px',
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
+		});
+	</script>
+</body>
+</html>
